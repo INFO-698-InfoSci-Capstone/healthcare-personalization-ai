@@ -55,7 +55,7 @@ project-root/
 
 ## 📸 Screenshot
 
-<img src="Sample.jpg" alt="App Screenshot"
+<img src="Sample.jpg" alt="App Screenshot" width="700"/>
 
 ---
 
