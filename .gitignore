@@ -1,0 +1,36 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# VS Code
+.vscode/
+.settings/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Streamlit
+.streamlit/config.toml
+
+# Model/Data files
+*.pkl
+*.h5
+*.joblib
+*.csv
+
+# Logs
+*.log
+
+# Git LFS files (optional safety)
+*.zip
+*.tar.gz
