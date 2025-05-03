@@ -1,36 +1,80 @@
-# Project compendium template
+# 🧪 Drug Risk & Side-Effect Predictor – Research Compendium
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## A compendium of code, data, and author's manuscript accompanying the manuscript:
+> A compendium of reproducible code, models, and data artifacts used to develop a predictive machine learning tool for drug risk classification and side effect analysis.
 
-#### TBD
+---
+
+## 🗂️ Overview
+
+This repository follows a **research compendium structure** to ensure that code, data, and outputs are reproducible and extendable.  
+The main application is built using **Python** and **Streamlit**. Future updates may include Docker support and a Binder environment.
+
+---
+
+## 🧪 Application Demo
+
+The app allows users to:
+- Select multiple drugs
+- Predict risk level (`High`, `Medium`, `Low`, `Unknown`)
+- Display potential side effects using ML
+- Lookup drugs by risk category from a curated dataset
+
+---
+
+## 📁 File Organization
+
+project-root/
+├── app.py # Main Streamlit app
+├── requirements.txt # Python dependencies
+├── Sample.jpg # Screenshot of the app
+├── README.md # You're here
+├── .gitignore
+│
+├── src/
+│ ├── Dataset_with_Risk_Label.csv # Annotated dataset
+│ ├── vectorizer_risk.pkl
+│ ├── vectorizer_effects.pkl
+│ ├── side_effect_mlb.pkl
+│ └── [*.pkl] # Models not pushed (100MB+)
+│
+├── analysis/
+│ ├── logs/
+│ │ └── log.md # Log of project changes
+│ ├── figures/ # Manuscript figures
+│ ├── data/
+│ │ ├── rawData/ # External datasets
+│ │ └── derivedData/ # Processed tables
+│ └── supplementaryMaterials/
+│ ├── supplementaryFigures/
+│ └── supplementaryTables/
 
 
-## Overview
-This repository is organized as a reproducible research compendium. Future updates to this compendium will include a Dockerfile and Binder Container
+---
 
-## File Organization
+## 📸 Screenshot
 
-    analysis/
-    |
-    ├── logs/
-    │   └── log.md          # log of any progress or relevant information
-    |
-    ├── figures/            # location of the figures produced for the manuscript
-    |
-    ├── data/
-    |   ├── rawData/        # data obtained from elsewhere
-    │   └── derivedData/    # data generated from rawData/ and scripts.*
-    |   
-    └── supplementaryMaterials/
-        ├── supplementaryFigures/     
-        |                   # supplementary figures for the main manuscript
-        └── supplementaryTables/      
-                            # supplementary tables for the main manuscript 
-    
-    R/Python/etc.           # scripts to run in the following order (also see associated README.md)
-        └── script.*        # hypothetical script used to wrangle the raw data, produce figures, analyses, and supplementary materials
+<img src="Sample.jpg" alt="App Screenshot" width="700"/>
 
-        
+---
 
+## 🛠️ Run Locally
+
+```bash
+git clone https://github.com/INFO-698-InfoSci-Capstone/healthcare-personalization-ai.git
+cd healthcare-personalization-ai
+
+python -m venv .venv
+.venv\Scripts\activate    # On Windows
+pip install -r requirements.txt
+
+streamlit run app.py
+
+📚 License
+This work is licensed under the GNU GPL v3 License.
+
+✍️ Author & Contributions
+Capstone Team – INFO 698
+University of Arizona – 2025 Cohort
+Advisor: Prof. Greg Chism
